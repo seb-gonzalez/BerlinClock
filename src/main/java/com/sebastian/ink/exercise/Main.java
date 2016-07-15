@@ -7,6 +7,7 @@ public class Main {
 		String lines = "";
 		String result = "";
 		
+		System.out.println("{run command}");
 		Scanner keyboard = new Scanner(System.in);
 		
 		for(int i=0; i<6; i++) lines+= keyboard.nextLine()+"\n";
