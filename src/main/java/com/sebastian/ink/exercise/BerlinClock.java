@@ -8,6 +8,7 @@ public class BerlinClock {
 		int minutes = 0;
 
 		if (!commandLine.isEmpty()) {
+			System.out.println(commandLine);
 			if (commandLine.split("(\r|\n)").length != 6) {
 				throw new RuntimeException("Wrong format, only 6 lines allow!");
 			} else {
