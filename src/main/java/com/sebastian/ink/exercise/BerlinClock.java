@@ -6,7 +6,9 @@ public class BerlinClock {
 		String result = "";
 		
 		if(!commandLine.isEmpty()) {
-			
+			if(commandLine.split("(\r|\n)").length != 6) {
+				throw new RuntimeException("Wrong format, only 6 lines allow!");
+			}
 		}
 			
 		return result;

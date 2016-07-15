@@ -15,4 +15,20 @@ public class BerlinClockTest {
 		Assert.assertEquals("", BerlinClock.getTime(""));
 	}
 
+	@Test
+	public void whenNumberOfLinesIsDifferentThanSixThenExceptionIsThrown() {
+		Exception e = null;
+
+		try {
+
+			//BerlinClock.getTime(".\nR...\nRRRR\n----\nYYRYYRYYRY.\nRRRR");
+			BerlinClock.getTime(".\nR...\nRRRR\n----\nYYRYYRYYRY.");
+		} catch (RuntimeException ex) {
+			e = ex;
+		}
+
+		Assert.assertNotNull(e);
+		Assert.assertEquals("Wrong format, only 6 lines allow!", e.getMessage());
+	}
+
 }
