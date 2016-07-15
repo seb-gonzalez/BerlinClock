@@ -30,5 +30,12 @@ public class BerlinClockTest {
 		Assert.assertNotNull(e);
 		Assert.assertEquals("Wrong format, only 6 lines allow!", e.getMessage());
 	}
+	
+	@Test
+	public void whenInsertExpectedValuesInCommanLineThenReturnTime() {
+		Assert.assertEquals("09:54 and 50 seconds", BerlinClock.getTime(".\nR...\nRRRR\n----\nYYRYYRYYRY.\nRRRR") );		
+	}
+	
+	
 
 }

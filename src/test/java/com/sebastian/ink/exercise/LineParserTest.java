@@ -27,5 +27,15 @@ public class LineParserTest {
 		Assert.assertNotNull(e);
 		Assert.assertEquals("Wrong format, only dots allow!", e.getMessage());
 	}
+	
+	@Test
+	public void whenLineContainsYThenReturnRandomEvenNumber() {
+		Assert.assertEquals(true, LineParser.parseSeconds("Y") % 2 == 0 );
+	}
+	
+	@Test
+	public void whenLineContainsYThenReturnRandomOddNumber() {
+		Assert.assertEquals(false, LineParser.parseSeconds(".") % 2 == 0 );
+	}
 
 }
